@@ -67,3 +67,4 @@ var CountVacation;
     thTable[40].innerHTML = payment.toFixed(2) + " ₴";
     var FullPayment = prepayment + payment;
     thTable[42].innerHTML = FullPayment.toFixed(2) + " ₴";
+    }
