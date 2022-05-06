@@ -19,84 +19,81 @@
   <section>
  <div class="container">
   <div class="row align-items-center">
-    <div class="col">
+    <div class="col" align="center">
       <div class="form-floating">
-  <select class="form-select" id="monthchoose" aria-label="Floating label select example">
-  <option></option>
-  <option value="01">Січень</option>
-  <option value="02">Лютий</option>
-  <option value="03">Березень</option>
-  <option value="04">Квітень</option>
-  <option value="05">Травень</option>
-  <option value="06">Червень</option>
-  <option value="07">Липень</option>
-  <option value="08">Серпень</option>
-  <option value="09">Вересень</option>
-  <option value="10">Жовтень</option>
-  <option value="11">Листопад</option>
-  <option value="12">Грудень</option>
-  </select>
-  <label for="workyears">Оберіть місяць</label>
-</div>
-<br/>
-<div class="input-group input-group-sm mb-3">
-  <span class="input-group-text" id="inputGroup-sizing-sm">Рік</span>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="years" value="202" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
-</div>
-<div class="form-floating mb-3">
-  <input type="text" class="form-control" id="days" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
-  <label for="days">Відпрацьованих змін</label>
-</div>
-<br/>
-<div class="form-floating mb-3">
-  <input type="text" class="form-control" id="sickleave" value= "0" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
-  <label for="sickleave">Кількість використаних лікарняних</label>
-</div>
-<br/>
-<div class="form-floating">
-  <select class="form-select" id="workyears" aria-label="Floating label select example">
-  <option selected value="1">0-5 років</option>
-  <option value="2">5-10 років</option>
-  <option value="3">10-20 років</option>
-  <option value="4">20+ років</option>
-  </select>
-  <label for="workyears">Вислуга років:</label>
-</div>
-<br/>
-
-<div class="form-floating mb-3">
-  <input type="text" class="form-control" id="vacation" value= "0" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
-  <label for="sickleave">Днів у відпустці</label>
-</div>
-<br/>
-<label class="form-check-label" for="premium">Премія за поточний місяць&nbsp;</label>
-  <input class="form-check-input" type="checkbox" id="premium">
-<br/><br/>
- <button value="calculate" onclick="calcSalary()" class="btn btn-secondary btn-sm">Обрахувати</button>
+        <select class="form-select" id="monthchoose" aria-label="Floating label select example">
+          <option></option>
+          <option value="01">Січень</option>
+          <option value="02">Лютий</option>
+          <option value="03">Березень</option>
+          <option value="04">Квітень</option>
+          <option value="05">Травень</option>
+          <option value="06">Червень</option>
+          <option value="07">Липень</option>
+          <option value="08">Серпень</option>
+          <option value="09">Вересень</option>
+          <option value="10">Жовтень</option>
+          <option value="11">Листопад</option>
+          <option value="12">Грудень</option>
+        </select>
+        <label for="workyears">Оберіть місяць</label>
+      </div>
+  <br/>
+    <div class="input-group input-group-sm mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-sm">Рік</span>
+      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id="years" value="202" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
     </div>
-    <div class="col-6">
-<table border="1" id="sallaryTable" class="table table-bordered">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="days" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+       <label for="days">Відпрацьованих змін</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="sickleave" value= "0" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+        <label for="sickleave">Кількість використаних лікарняних</label>
+      </div>
+      <div class="form-floating">
+        <select class="form-select" id="workyears" aria-label="Floating label select example">
+        <option selected value="1">0-5 років</option>
+        <option value="2">5-10 років</option>
+        <option value="3">10-20 років</option>
+        <option value="4">20+ років</option>
+        </select>
+        <label for="workyears">Вислуга років:</label>
+      </div>
+  <br/>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="vacation" value= "0" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+        <label for="sickleave">Днів у відпустці</label>
+      </div>
+        <label class="form-check-label" for="premium">Премія за поточний місяць&nbsp;</label>
+        <input class="form-check-input" type="checkbox" id="premium">
+    <br/><br/>
+      <button value="calculate" onclick="calcSalary()" class="btn btn-secondary btn-sm">Обрахувати</button>
+</div>
+
+<div class="col-6">
+<table class="table table-bordered" id="sallaryTable">
     <tr>
-    <th colspan="1" align="left">Період</th>
+    <th colspan="1" align="left"> <b>Період</b></th>
     <th colspan="3" align="center"></th>
   </tr>
   <tbody>
   <tr class="table-secondary">
-    <th>Вид</th>
-    <th colspan="2">Відпрацьовано</th>
-    <th>Сума</th>
+    <th><b>Вид</b></th>
+    <th colspan="2"><b>Відпрацьовано</b></th>
+    <th><b>Сума</b></th>
   </tr>
 
   <tr>
     <th></th>
-    <th class="table-secondary">Днів</th>
-    <th class="table-secondary">Годин</th>
+    <th class="table-light"><b>Днів</b></th>
+    <th class="table-light"><b>Годин</b></th>
     <th></th>
   </tr>
   </tbody>
   <tbody>
   <tr>
-    <th colspan="4" align="left">Нараховано</th>
+    <th colspan="4" align="left"><b>Нараховано</b></th>
   </tr>
   </tbody>
   <tr>
@@ -154,18 +151,19 @@
     <th class="table-light"></th>
   </tr>
 </table>
-    </div>
-    <div class="col">
+</div>
+
+<div class="col">
 <table class="table table-bordered" id="TaxTable">
   <caption>Розраховано податків</caption>
     <tr>
-    <th align="left">Період</th>
+    <th align="left"><b>Період</b></th>
     <th></th>
   </tr>
   <tbody>
   <tr class="table-secondary">
-    <th>Вид</th>
-    <th>Сума</th>
+    <th><b>Вид</b></th>
+    <th><b>Сума</b></th>
   </tr>
 </tbody>
   <tbody>
@@ -186,10 +184,10 @@
     <th></th>
   </tr>
 </table>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-</section> 
+  </section> 
 </main>
 <footer><h2>Copyright: Oleksii Hutsalo</h2></footer>
 </body>
