@@ -5,12 +5,13 @@
    font-family: 'Montserrat', sans-serif;
 }
  header {
-   position: fixed; top: 0px; left: 0px;
    min-height: 50px;
    width: 100%;
    background-color: #212922;
+   position: fixed;
    display: flex;
    align-items: center;
+   z-index: 100;
 }
   footer {
    min-height: 30px;
@@ -52,7 +53,6 @@
     display: flex;
     flex-direction: column;
     margin: 0;
-    margin-top: 50 px;
   }
 
  @media (max-width: 1200px) {
