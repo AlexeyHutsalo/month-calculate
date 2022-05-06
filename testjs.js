@@ -54,17 +54,16 @@ var CountVacation;
             thTable[29].innerHTML = CountPremium;
         }
         var FullPay = presalary + countsickpay + PremiumForWork + CountVacation + CountPremium;
-            thTable[31].innerHTML = FullPay + " ₴";
+            thTable[31].innerHTML = FullPay.toFixed(2) + " ₴";
     var MilitaryTax = FullPay * 0.015;
     th1Table[6].innerHTML = MilitaryTax;
     var Taxes = FullPay * 0.2;
     th1Table[8].innerHTML = Taxes;
     var SumOfTax = MilitaryTax + Taxes;
-    th1Table[10].innerHTML = SumOfTax + " ₴";
+    th1Table[10].innerHTML = SumOfTax.toFixed(2) + " ₴";
     var prepayment = (FullPay - SumOfTax) * 0.3;
-    thTable[36].innerHTML = prepayment + " ₴";
+    thTable[36].innerHTML = prepayment.toFixed(2) + " ₴";
     var payment = (FullPay - SumOfTax) * 0.7;
-    thTable[40].innerHTML = payment + " ₴";
+    thTable[40].innerHTML = payment.toFixed(2) + " ₴";
     var FullPayment = prepayment + payment;
-    thTable[42].innerHTML = FullPayment + " ₴";
-}
+    thTable[42].innerHTML = FullPayment.toFixed(2) + " ₴";
