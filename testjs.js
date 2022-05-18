@@ -89,3 +89,11 @@ var CountVacation;
     if (isNaN(FullPayment)) FullPayment = 0;
     thTable[42].innerHTML = FullPayment.toFixed(2) + " ₴";
 }
+
+function navitomonth() {
+  window.location = "https://alexeyhutsalo.github.io/month-calculate/"
+}
+
+function navitoyear() {
+  window.location = "https://alexeyhutsalo.github.io/year-calculate/"
+}
